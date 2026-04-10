@@ -11,3 +11,5 @@
 .DS_Store
 crash.log
 ansible/key.pem
+
+node_modules/

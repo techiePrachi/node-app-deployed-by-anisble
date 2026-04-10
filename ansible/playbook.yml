@@ -1,8 +1,9 @@
 ---
-- name: Install and start nginx
+- name: Start nodejs app
   hosts: web
   become: yes
 
   roles:
     - common
+    - nodejs
     - nginx
