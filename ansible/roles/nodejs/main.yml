@@ -11,18 +11,18 @@
 
 - name: Create app directory
   file:
-    path: /home/ubuntu/app
+    path: /home/ec2-user/app
     state: directory
 
 - name: Copy app files
   copy:
     src: /app/
-    dest: /home/ubuntu/app/
+    dest: /home/ec2-user/app/
 
 - name: Install node modules
   command: npm install
   args:
-    chdir: /home/ubuntu/app
+    chdir: /home/ec2-user/app
 
 - name: Install pm2 globally
   npm:
@@ -33,5 +33,5 @@
 - name: Start the app
   command: pm2 start server.js
   args:
-    chdir: /home/ubuntu/app
+    chdir: /home/ec2-user/app
 
