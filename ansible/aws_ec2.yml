@@ -6,7 +6,7 @@ filters:
   tag:Project: ansible-inventory
 
 hostnames:
-  - public-ip-address
+  - public_ip_address
 
 compose:
   ansible_host: public_ip_address
